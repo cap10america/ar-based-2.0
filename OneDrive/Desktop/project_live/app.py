@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, render_template , redirect , url_for
+import hashlib
 
 # # from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 
@@ -37,10 +38,10 @@ def get_db_connection():
 
 
 # # # Function to hash the password (replace with your chosen hashing algorithm)
-# # def hash_password(password):
-# #     import hashlib
-# #     hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
-# #     return hashed_password
+def hash_password(password):    
+    hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
+    return hashed_password
+
 
 
 
@@ -82,11 +83,11 @@ def register():
       
       
       query ="insert into user (username ,email,password ,phone) values (%s,%s,%s,%s)"
-      mycommand.execute( query, (name ,email , password , phone) )
+      mycommand.execute( query, (name ,email , hash_password(password) , phone) )
       conn.commit()
       mycommand.close()
       conn.close()
-      return f" {name} registered successfully",201
+      return f" {name} registered successfully"
       
      
     else :
