@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div>
+            <form  id ="loginform" action="{{url_for('login')}}" method="POST">
+                
+                <label for="username">username</label><br>
+               <input type="text" id ="username"><br>
+               <label for="password">password</label><br>
+               <input type="text" name="password" id="password"><br>
+               <input type="submit" value="submit"><br>
+              
+             </form>
+               
+
+        </div>
+     
+        
+        <script src="" async defer></script>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form name="login" method="post" action=".">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
