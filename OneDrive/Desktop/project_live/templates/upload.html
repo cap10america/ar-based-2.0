@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Please Upload an Image</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data" class="text-center">
+            <div class="form-group">
+                <label for="file" class="form-label">Upload Image</label>
+                <input type="file" name="file" id="file" accept="image/*" class="form-control-file" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Upload</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

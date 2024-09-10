@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 </head>
 <body>
-    <form action="app.py" ,method='post' >
-        <input type="text" name="name"><br>
-        <input type="submit" name="submit">
+
+    <form action=".">
+        <label for="username" name="username">username</label>
+        <input type="text" name="username"><br>
+        <label for="password" name="password">password</label>
+        <input type="text" name="password"><br>
+        <input   type ="submit" name="submit" class="btn btn-primary" ><br>
     </form>
+
+        
+
     
 </body>
 </html>
