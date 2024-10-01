@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h1>hello cap10  welcome to avengers</h1>
+        <h2>Login successfull</h2>
+    
+
+
+        <table border="1">
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>username</th>
+              <th>Password</th>
+              <th> Address</th>
+              <th>Contact_no</th>
+            </tr>
+            {% for record in data %}
+            <tr>
+              <td>{{ record.0 }}</td>
+              <td>{{ record.1 }}</td>
+              <td>{{ record.2 }}</td>
+              <td>{{ record.3 }}</td>
+              <td>{{ record.4 }}</td>
+              <td>{{ record.5 }}</td>
+              <td>{{ record.6 }}</td>
+              <td>{{ record.7 }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+</body>
+</html>
